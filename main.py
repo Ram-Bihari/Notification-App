@@ -1,8 +1,8 @@
 import time
-from plyer import notification
+from win10toast import ToastNotifier
 
-if __name__ == "__main__":
-    while True:
-        notification.notify(
-            title = "**Please Drink Water"
-        )
+my_notification = ToastNotifier()
+
+for i in range(1, 51):
+    my_notification.show_toast("Alert!", "Stop using the laptop and take a break for 10 mins!")
+    time.sleep(5400)
